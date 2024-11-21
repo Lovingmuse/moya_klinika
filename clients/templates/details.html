@@ -1,0 +1,16 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Details about {{ myclient.name }} {{ myclient.animal }}
+{% endblock %}
+
+
+{% block content %}
+  <h1>{{ myclient.name }} {{ myclient.animal }}</h1>
+
+  <p>Phone {{ myclient.phone }}</p>
+  <p>Client since: {{ myclient.joined_date }}</p>
+
+  <p>Back to <a href="/clients">Clients base</a></p>
+
+{% endblock %}

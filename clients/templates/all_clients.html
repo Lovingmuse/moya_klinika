@@ -1,0 +1,17 @@
+{% extends "master.html" %}
+
+{% block title %}
+Our little clinic - all clients
+{% endblock %}
+
+{% block content %}
+
+<p><a href="/">Главная страница</a></p>
+  <h1>Clients</h1>
+  
+  <ul>
+    {% for x in myclients %}
+      <li><a href="details/{{ x.id }}">{{ x.name }} {{ x.animal }}</a></li>
+    {% endfor %}
+  </ul>63
+{% endblock %}
